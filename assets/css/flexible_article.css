@@ -1,0 +1,43 @@
+:root {
+  --radius-card: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article {
+  background-color: #fbf7e3;
+  color: #721f01;
+  display: flex;
+  margin: 15px;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+article div {
+  flex-grow: 1;
+}
+
+article img {
+  width: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  article {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  article img {
+    order: -1;
+  }
+}

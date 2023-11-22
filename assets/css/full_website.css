@@ -1,0 +1,334 @@
+:root {
+  --radius-card: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  main {
+    width: calc(100vw - 250px);
+  }
+}
+
+header {
+  background-color: #fbf7e3;
+  color: #721f01;
+  margin: 10px;
+  border-radius: 70px;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  gap: 10px;
+}
+
+header nav ul li {
+  background-color: #f3df85;
+  width: 40%;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+header nav ul li:nth-of-type(3) {
+  width: 80%;
+  height: 80px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-radius: 40px;
+  gap: 10px;
+  order: -1;
+}
+
+li > img {
+  height: 30px;
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  header nav ul {
+    display: flex;
+    column-gap: 10px;
+    height: 120px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  header nav ul li {
+    flex-grow: 1;
+    width: unset;
+    border-radius: 25px;
+    height: 50px;
+  }
+
+  header nav ul li:nth-of-type(3) {
+    flex-grow: 2;
+    width: unset;
+    order: 0;
+    height: 90px;
+    border-radius: 45px;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  header nav ul {
+    font-size: 1rem;
+    height: 140px;
+  }
+
+  header nav ul li {
+    height: 70px;
+    border-radius: 35px;
+  }
+
+  header nav ul li:nth-of-type(3) {
+    height: 110px;
+    border-radius: 55px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 250px;
+    min-height: 100vh;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    min-height: 500px;
+    justify-content: flex-start;
+    row-gap: 20px;
+  }
+
+  header nav ul li {
+    height: 80px;
+    width: 200px;
+    border-radius: 40px;
+    flex-grow: 0;
+    font-size: 0.8rem;
+  }
+
+  header nav ul li:nth-of-type(3) {
+    width: 200px;
+    flex-grow: 0;
+    height: 80px;
+    border-radius: 40px;
+    order: -1;
+    font-size: 2.3em;
+    gap: 30px;
+  }
+
+  li > img {
+    height: 35px;
+  }
+}
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+/*Product Card*/
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px;
+  color: #721f01;
+}
+
+@media screen and (min-width: 576px) {
+  h2 {
+    text-align: left;
+  }
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productCard {
+  background-color: #fbf7e3;
+  color: #721f01;
+  width: 248px;
+  height: 500px;
+  margin: 20px;
+  border-radius: var(--radius-card);
+  text-align: center;
+  flex-grow: 1;
+}
+
+.productCard img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-top-right-radius: var(--radius-card);
+  border-top-left-radius: var(--radius-card);
+}
+
+.productCard .middleCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.productCard .productName h3,
+.productCard .productName p {
+  margin: 0;
+}
+
+.productCard .productName {
+  margin: 15px;
+}
+
+.productCard button {
+  margin: 15px;
+  background-color: #f3df85;
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  width: 50%;
+  font-size: 0.9rem;
+  color: #721f01;
+}
+
+.productCard:nth-of-type(5) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    flex-wrap: nowrap;
+  }
+
+  .productCard {
+    height: 250px;
+  }
+
+  .productCard img {
+    height: 60%;
+  }
+
+  .productCard .productName {
+    margin: 5px;
+  }
+
+  .productCard button {
+    margin-top: 5px;
+    height: 30px;
+    border-radius: 15px;
+  }
+
+  .productCard:nth-of-type(4) {
+    display: none;
+  }
+
+  .productCard:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 955px) {
+  .productCard:nth-of-type(3) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .productCard:nth-of-type(4) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .productCard:nth-of-type(5) {
+    display: block;
+  }
+}
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+/*Flexible Article*/
+article {
+  background-color: #fbf7e3;
+  color: #721f01;
+  display: flex;
+  margin: 15px;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 18px;
+  gap: 20px;
+}
+
+article img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  article {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  article img {
+    order: -1;
+    flex-grow: 1;
+  }
+}
